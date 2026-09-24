@@ -112,7 +112,7 @@
         .task-list { list-style-type: decimal; margin-left: 1.5rem; color: #e2e8f0; font-size: 1.1rem; line-height: 1.7; }
         .task-list li { margin-bottom: 1.5rem; }
 
-        /* ==================== MULTIMEDIA (HUECO PROFESOR) ==================== */
+        /* ==================== MULTIMEDIA ==================== */
         .video-wrapper {
             background: rgba(0,0,0,0.5); border: 2px solid #3b82f6; border-radius: 15px;
             padding: 20px; margin: 3rem 0; text-align: center;
@@ -242,9 +242,8 @@
                 <div class="video-wrapper">
                     <h4><i class="fa-solid fa-film"></i> Archivo Multimedia 01: El Origen del Español</h4>
                     <div class="video-container">
-                        <!-- PROFE: INSERTA AQUÍ EL ENLACE DE YOUTUBE O LA RUTA DE TU VÍDEO (.mp4) -->
-                        <p class="video-placeholder-text">[PROYECCIÓN DEL PROFESOR - VÍDEO ORIGEN Y EVOLUCIÓN HISTÓRICA]</p>
-                        <!-- <iframe src="TU_ENLACE_AQUI" frameborder="0" allowfullscreen></iframe> -->
+                        <!-- VIDEO ORIGINAL RESTAURADO -->
+                        <iframe src="https://www.youtube.com/embed/2sO4ezjrjDE?si=yRT4ki6hAdTpGTmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -273,7 +272,7 @@
                     </div>
                 </div>
 
-                <div class="challenge-zone">
+                <div class="challenge-zone mt-2">
                     <h4 style="color: var(--accent-gold); font-size: 1.6rem;"><i class="fa-solid fa-pen-nib"></i> Misiones de Evolución e Historia</h4>
                     <ol class="task-list">
                         <li><strong>Arqueología Lingüística:</strong> Crea una tabla grande en tu cuaderno con tres columnas: <em>Sustrato Prerromano, Superestrato Germánico y Superestrato Árabe</em>. Clasifica las siguientes palabras aplicando la teoría leída (o deduciéndolo por el tipo de palabra): <em>almohada, barro, espía, alcalde, yelmo, perro, zanahoria, guerra, conejo, ajedrez, albañil, lanza</em>.</li>
@@ -331,6 +330,13 @@
                         <li><strong>Vocabulario de Ida y Vuelta:</strong> Elabora en tu cuaderno una lista de al menos 7 palabras que provengan del sustrato indígena americano (indigenismos) que uses en tu vida diaria o conozcas. Explica de qué campos semánticos provienen mayoritariamente (pista: fíjate en la flora, fauna, clima y alimentos que no existían en Europa antes de 1492).</li>
                     </ol>
                 </div>
+
+                <h3 class="mt-2" style="font-size: 1.8rem; margin-top: 40px;"><i class="fa-solid fa-microchip"></i> Terminal de Emparejamiento Histórico</h3>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px;">Empareja cada concepto con su definición correcta para asentar las bases históricas. (50 XP por acierto)</p>
+                <div class="match-game" id="match-game-container">
+                    <div class="terms-container" id="terms-container"></div>
+                    <div class="defs-container" id="defs-container"></div>
+                </div>
             </div>
         </section>
 
@@ -362,11 +368,10 @@
                 </div>
 
                 <div class="video-wrapper">
-                    <h4><i class="fa-solid fa-film"></i> Archivo Multimedia 02: Diglosia y Normalización</h4>
+                    <h4><i class="fa-solid fa-film"></i> Archivo Multimedia 02: Lenguas y Dialectos</h4>
                     <div class="video-container">
-                        <!-- PROFE: INSERTA AQUÍ EL ENLACE DE YOUTUBE O LA RUTA DE TU VÍDEO (.mp4) -->
-                        <p class="video-placeholder-text">[PROYECCIÓN DEL PROFESOR - VÍDEO BILINGÜISMO, DIGLOSIA Y CONSTITUCIÓN]</p>
-                        <!-- <iframe src="TU_ENLACE_AQUI" frameborder="0" allowfullscreen></iframe> -->
+                        <!-- VIDEO ORIGINAL RESTAURADO -->
+                        <iframe src="https://www.youtube.com/embed/tgumv57axFw?si=XcqWG0RwxfcttOMq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -397,7 +402,7 @@
                     <p>El andaluz es una <strong>modalidad lingüística</strong> (un dialecto histórico) del español meridional, originado durante la repoblación del sur peninsular entre los siglos XIII y XV por gentes llegadas de Castilla, León y Aragón, que se mezclaron en la frontera.</p>
                     <p>El andaluz es un dialecto sumamente innovador y vanguardista. Evoluciona más rápido que el español del norte aplicando la ley de la <em>economía del lenguaje</em> (la ley del mínimo esfuerzo articulatorio, que es la misma ley que hizo que el latín perdiera las declinaciones para convertirse en castellano). Sus principales rasgos (que han influido decisivamente en el español de América) son:</p>
                     <ul>
-                        <li><span class="highlight">Seseo:</span> Pronunciar la 'c/z' como 's' (Ej: <em>sapato, sielo, sena, asul</em>). Es mayoritario, está extendidísimo en toda América y tiene un alto prestigio social, especialmente en grandes urbes urbanas como Sevilla capital o Córdoba.</li>
+                        <li><span class="highlight">Seseo:</span> Pronunciar la 'c/z' como 's' (Ej: <em>sapato, sielo, sena, asul</em>). Está extendidísimo en toda América y tiene un alto prestigio social, especialmente en grandes urbes urbanas como Sevilla capital o Córdoba.</li>
                         <li><span class="highlight">Ceceo:</span> Pronunciar la 's' como 'z' (Ej: <em>zolo, kaza, zervesa</em>). Tradicionalmente ha estado más estigmatizado considerándose "más rústico o rural", pero es un fenómeno amplísimo que domina casi toda la provincia de Huelva, Cádiz y el sur de la provincia de Sevilla.</li>
                         <li><span class="highlight">Yeísmo:</span> Pronunciar la 'll' palatal como 'y' (Ej: <em>yuvia, cabayo, caye</em>). Aunque es un rasgo andaluz clásico, hoy es un fenómeno generalizado en el 90% de España y América.</li>
                         <li><span class="highlight">Aspiración y pérdida consonántica:</span> Es la gran marca de la economía del lenguaje andaluz. Relajación extrema de consonantes al final de sílaba o palabra.
@@ -419,11 +424,10 @@
                 </div>
 
                 <div class="video-wrapper">
-                    <h4><i class="fa-solid fa-film"></i> Archivo Multimedia 03: Variedades Andaluzas y Estereotipos</h4>
+                    <h4><i class="fa-solid fa-film"></i> Archivo Multimedia 03: Acentos de Andalucía y Estereotipos</h4>
                     <div class="video-container">
-                        <!-- PROFE: INSERTA AQUÍ EL ENLACE DE YOUTUBE O LA RUTA DE TU VÍDEO (.mp4) SOBRE EL ANDALUZ -->
-                        <p class="video-placeholder-text">[PROYECCIÓN DEL PROFESOR - VÍDEO SOBRE EL HABLA ANDALUZA Y PREJUICIOS LINGÜÍSTICOS]</p>
-                        <!-- <iframe src="TU_ENLACE_AQUI" frameborder="0" allowfullscreen></iframe> -->
+                        <!-- VIDEO ORIGINAL RESTAURADO -->
+                        <iframe src="https://www.youtube.com/embed/haLoIzAojdM?si=cpNzH-Qx9kckScB2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -575,7 +579,6 @@
 
     </main>
 
-    <!-- FOOTER EXACTO SOLICITADO -->
     <footer>
         <p style="font-size: 1.2rem; color: #fff; letter-spacing: 1px;"><strong>Departamento de Lengua Castellana y Literatura. IES San José de la Rinconada. 2026</strong></p>
         <p style="font-size: 0.95rem; margin-top: 0.8rem; color: #64748b;">Material didáctico interactivo de alto rendimiento adaptado a los saberes básicos del Bloque A de 1º de Bachillerato (LOMLOE Andalucía).</p>
@@ -650,7 +653,6 @@
         let selectedTerm = null;
 
         function initMatchGame() {
-            // Check if containers exist before initializing
             const termsCont = document.getElementById('terms-container');
             const defsCont = document.getElementById('defs-container');
             if(!termsCont || !defsCont) return;
