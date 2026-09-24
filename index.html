@@ -38,7 +38,7 @@
         .glass-panel {
             background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--glass-border); border-radius: 20px; box-shadow: var(--glass-shadow);
-            padding: 3rem; position: relative; overflow: hidden; margin-bottom: 2rem;
+            padding: 3rem; position: relative; overflow: hidden; margin-bottom: 3rem;
         }
 
         .glass-panel::before {
@@ -47,7 +47,7 @@
             transform: skewX(-20deg); animation: shine 8s infinite; pointer-events: none;
         }
 
-        h1, h2, h3 { font-weight: 800; letter-spacing: 1px; margin-bottom: 1.5rem; }
+        h1, h2, h3, h4 { font-weight: 800; letter-spacing: 1px; margin-bottom: 1.5rem; }
         .neon-text { color: #fff; text-shadow: 0 0 5px #fff, 0 0 10px var(--primary-neon), 0 0 20px var(--primary-neon); }
         .neon-text-purple { color: #fff; text-shadow: 0 0 5px #fff, 0 0 10px var(--secondary-neon), 0 0 20px var(--secondary-neon); }
         .neon-text-gold { color: #fff; text-shadow: 0 0 5px #fff, 0 0 10px var(--accent-gold), 0 0 20px var(--accent-gold); }
@@ -60,20 +60,18 @@
         }
         .btn-neon:hover { background: var(--primary-neon); color: var(--bg-darker); box-shadow: 0 0 20px var(--primary-neon); }
 
-        /* ==================== HEADER Y NAVEGACIÓN ==================== */
+        /* ==================== HEADER Y NAVEGACIÓN SPA ==================== */
         header {
-            position: fixed; top: 0; width: 100%; background: rgba(7, 8, 13, 0.9);
+            position: fixed; top: 0; width: 100%; background: rgba(7, 8, 13, 0.95);
             backdrop-filter: blur(10px); border-bottom: 1px solid var(--glass-border);
             z-index: 100; padding: 15px 20px; display: flex; flex-direction: column; gap: 15px;
         }
 
         .header-top { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1400px; margin: 0 auto; }
-
         .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; color: white; display: flex; align-items: center; gap: 10px; }
-        
         .status-bar { display: flex; gap: 20px; font-family: 'Space Mono', monospace; font-size: 1.2rem; color: var(--accent-gold); }
 
-        nav { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; width: 100%; max-width: 1200px; margin: 0 auto; }
+        nav { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; width: 100%; max-width: 1300px; margin: 0 auto; }
         nav a {
             color: var(--text-muted); text-decoration: none; font-weight: 600; padding: 8px 15px;
             border-radius: 6px; transition: all 0.3s; text-transform: uppercase; font-size: 0.9rem;
@@ -83,49 +81,57 @@
         nav a.active { color: var(--bg-darker); background-color: var(--primary-neon); box-shadow: 0 0 15px rgba(0, 240, 255, 0.5); }
 
         /* ==================== CONTENEDOR PRINCIPAL ==================== */
-        main { margin-top: 130px; padding: 20px; flex-grow: 1; display: flex; justify-content: center; }
-        
+        main { margin-top: 140px; padding: 20px; flex-grow: 1; display: flex; justify-content: center; }
         .screen { display: none; width: 100%; max-width: 1200px; animation: fadeIn 0.5s ease; }
         .screen.active { display: block; }
 
         /* ==================== CAJAS DE TEORÍA Y RETOS ==================== */
         .theory-box {
             background: rgba(255, 255, 255, 0.03); border-left: 4px solid var(--primary-neon);
-            padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; font-size: 1.05rem; line-height: 1.7;
+            padding: 1.8rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; font-size: 1.1rem; line-height: 1.7;
         }
-        .theory-box ul { margin-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;}
-        .theory-box li { margin-bottom: 0.5rem; }
+        .theory-box ul { margin-left: 1.8rem; margin-top: 0.5rem; margin-bottom: 0.5rem;}
+        .theory-box li { margin-bottom: 0.8rem; }
         .highlight { color: var(--primary-neon); font-weight: bold; }
         .highlight-purple { color: var(--secondary-neon); font-weight: bold; }
 
+        .text-analysis-box {
+            background-color: rgba(0,0,0,0.4); border: 1px solid var(--glass-border);
+            padding: 2rem; border-radius: 8px; margin: 2rem 0;
+        }
+        .blockquote-style {
+            border-left: 4px solid var(--secondary-neon); padding-left: 1.5rem; font-family: 'Space Mono', monospace;
+            color: #cbd5e1; background: rgba(188, 19, 254, 0.05); padding: 1.5rem;
+            border-radius: 0 8px 8px 0; font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;
+        }
+
         .challenge-zone {
             background: rgba(255, 215, 0, 0.05); border: 2px dashed var(--accent-gold);
-            border-radius: 10px; padding: 2rem; margin: 2.5rem 0; position: relative;
+            border-radius: 10px; padding: 2.5rem; margin: 3rem 0; position: relative;
         }
         .challenge-zone::before {
-            content: "MISIÓN DE CAMPO (CUADERNO)"; position: absolute; top: -14px; left: 20px;
+            content: "MISIÓN DE CAMPO (EN EL CUADERNO)"; position: absolute; top: -14px; left: 20px;
             background: var(--accent-gold); color: var(--bg-darker); padding: 4px 15px;
             font-size: 0.85rem; font-weight: 800; border-radius: 20px; letter-spacing: 1px;
         }
-        .task-list { list-style-type: decimal; margin-left: 1.5rem; margin-top: 1rem; color: #e2e8f0; font-size: 1.05rem; }
-        .task-list li { margin-bottom: 1rem; }
+        .task-list { list-style-type: decimal; margin-left: 1.5rem; margin-top: 1rem; color: #e2e8f0; font-size: 1.1rem; }
+        .task-list li { margin-bottom: 1.2rem; }
 
-        /* ==================== VÍDEOS ==================== */
+        /* ==================== MULTIMEDIA (HUECO PROFESOR) ==================== */
         .video-container {
             position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;
-            border-radius: 15px; border: 2px solid var(--glass-border); margin: 2rem 0; background: #000; box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+            border-radius: 15px; border: 2px solid var(--glass-border); margin: 2.5rem 0; background: #000; box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
         }
         .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .video-placeholder-text { position:absolute; top:45%; width:100%; text-align:center; color:var(--primary-neon); font-family: 'Space Mono'; }
 
         /* ==================== MINIJUEGOS (MAPA, MATCH, DROP, QUIZ, ROSSETA) ==================== */
-        /* Mapa */
         .map-container { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 2rem; }
         .map-svg-wrap { flex: 1; min-width: 300px; background: rgba(0,0,0,0.4); border-radius: 15px; padding: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
         .info-panel { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
         svg path { fill: #1f2937; stroke: var(--primary-neon); stroke-width: 2; transition: all 0.3s; cursor: pointer; }
         svg path:hover { fill: var(--secondary-neon); filter: drop-shadow(0 0 10px var(--secondary-neon)); }
         
-        /* Match */
         .match-game { margin-top: 30px; display: flex; flex-direction: column; gap: 20px;}
         .terms-container, .defs-container { display: flex; flex-wrap: wrap; gap: 10px; }
         .term-btn { background: rgba(0, 240, 255, 0.1); border: 1px solid var(--primary-neon); color: white; padding: 10px 15px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
@@ -135,14 +141,12 @@
         .def-box:hover { border-color: var(--primary-neon); }
         .def-box.matched { border: 1px solid var(--success); background: rgba(0,255,136,0.1); color: var(--success); cursor: default; }
 
-        /* Quiz */
         .quiz-options { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
         .quiz-btn { background: rgba(0,0,0,0.5); border: 1px solid var(--text-muted); padding: 15px; color: white; border-radius: 10px; cursor: pointer; text-align: left; font-size: 1.1rem; transition: 0.3s; }
         .quiz-btn:hover { border-color: var(--primary-neon); background: rgba(0, 240, 255, 0.1); }
         .quiz-btn.correct { background: var(--success); color: black; border-color: var(--success); }
         .quiz-btn.wrong { background: var(--danger); color: white; border-color: var(--danger); }
 
-        /* Andaluz Drag & Drop */
         .traits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
         .trait-drop { min-height: 120px; border: 2px dashed var(--secondary-neon); border-radius: 10px; padding: 10px; display: flex; flex-direction: column; align-items: center; background: rgba(188, 19, 254, 0.05); }
         .trait-drop h4 { color: var(--accent-gold); margin-bottom: 10px; text-align: center; }
@@ -150,13 +154,12 @@
         .word-draggable { background: var(--bg-darker); border: 1px solid var(--primary-neon); padding: 8px 15px; border-radius: 20px; margin: 5px; cursor: pointer; display: inline-block; transition: all 0.2s; }
         .word-draggable:hover { transform: scale(1.05); background: rgba(0, 240, 255, 0.2); }
 
-        /* Rosetta Boss */
         .rosetta-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0; }
         .lang-dial { background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px; border: 1px solid var(--accent-gold); text-align: center; }
         select.rosetta-select { width: 100%; padding: 12px; margin-top: 10px; background: var(--bg-darker); color: var(--primary-neon); border: 1px solid var(--primary-neon); border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 1.1rem; outline: none; cursor: pointer;}
 
         /* Footer */
-        footer { background: rgba(7, 8, 13, 0.95); border-top: 2px solid var(--primary-neon); color: var(--text-muted); text-align: center; padding: 2rem; margin-top: auto; z-index: 10;}
+        footer { background: rgba(7, 8, 13, 0.98); border-top: 2px solid var(--primary-neon); color: var(--text-muted); text-align: center; padding: 2.5rem; margin-top: auto; z-index: 10;}
 
         /* Animaciones */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
@@ -166,10 +169,8 @@
 </head>
 <body>
 
-    <!-- Fondo de Partículas -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Cabecera y Navegación SPA -->
     <header>
         <div class="header-top">
             <div class="logo">
@@ -181,11 +182,12 @@
             </div>
         </div>
         <nav id="main-nav">
-            <a href="#screen-intro" class="active">Inicio de Misión</a>
-            <a href="#screen-historia">1. Evolución e Historia</a>
-            <a href="#screen-contacto">2. Contacto y Derechos</a>
-            <a href="#screen-andalucia">3. El Andaluz y Prejuicios</a>
-            <a href="#screen-quiz">4. Simulador de Evaluación</a>
+            <a href="#screen-intro" class="active">Inicio</a>
+            <a href="#screen-historia">1. Historia Peninsular</a>
+            <a href="#screen-mundo">2. El Español en el Mundo</a>
+            <a href="#screen-contacto">3. Contacto y Derechos</a>
+            <a href="#screen-andalucia">4. El Andaluz</a>
+            <a href="#screen-quiz">5. Simulador Final</a>
         </nav>
     </header>
 
@@ -193,54 +195,44 @@
         <!-- PANTALLA 0: INTRODUCCIÓN -->
         <section id="screen-intro" class="screen active">
             <div class="glass-panel" style="max-width: 900px; margin: 4rem auto; text-align: center;">
-                <i class="fa-solid fa-earth-europe neon-text" style="font-size: 5rem; margin-bottom: 20px;"></i>
-                <h1 class="neon-text" style="font-size: 3rem;">El Enigma de las Lenguas</h1>
-                <h3 style="color: var(--accent-gold);">Bloque A: Las Lenguas y sus Hablantes (1º Bachillerato)</h3>
+                <i class="fa-solid fa-earth-europe neon-text" style="font-size: 6rem; margin-bottom: 20px;"></i>
+                <h1 class="neon-text" style="font-size: 3.5rem;">El Enigma de las Lenguas</h1>
+                <h3 style="color: var(--accent-gold);">Bloque A: Las lenguas y sus hablantes (1º Bachillerato)</h3>
                 
                 <div class="theory-box" style="text-align: left; border-color: var(--accent-gold);">
-                    <p><strong>Agente, bienvenido a la Agencia de Inteligencia Lingüística.</strong> Tu misión de hoy te llevará a través de los siglos para desentrañar el origen, la evolución y el marco legal de las lenguas de España.</p>
-                    <p class="mt-2">En este módulo de alto rendimiento deberás:</p>
+                    <p><strong>Agente, bienvenido a la Agencia de Inteligencia Lingüística.</strong> Tu misión de hoy te llevará a través de los siglos para desentrañar el origen, la evolución, la variedad y el marco legal de las lenguas de España y del mundo hispanohablante.</p>
+                    <p class="mt-2">En este módulo de alto rendimiento deberás analizar:</p>
                     <ul>
-                        <li>Rastrear la evolución histórica desde las lenguas prerromanas hasta el español actual, incluyendo el Sefardí y el Español de América.</li>
-                        <li>Dominar los fenómenos de contacto: bilingüismo, diglosia, préstamos e interferencias.</li>
-                        <li>Defender la diversidad lingüística amparada en la Constitución y desmontar los prejuicios sobre las hablas andaluzas.</li>
+                        <li>El desarrollo sociohistórico: desde las lenguas prerromanas hasta la consolidación del español moderno y la vitalidad del sefardí.</li>
+                        <li>El español en América, sus variedades y su potencia como Lengua Extranjera (ELE).</li>
+                        <li>Los fenómenos del contacto (bilingüismo, diglosia, interferencias) y el complejo marco de los derechos lingüísticos constitucionales y la normalización.</li>
+                        <li>Las hablas andaluzas, su riqueza fonética y morfosintáctica, y la lucha activa contra los prejuicios etnolingüísticos.</li>
                     </ul>
                 </div>
-                
-                <div style="background: rgba(255,51,102,0.1); border-left: 4px solid var(--danger); padding: 15px; text-align: left; margin-bottom: 30px;">
-                    <i class="fa-solid fa-triangle-exclamation" style="color: var(--danger);"></i> <strong>Instrucciones:</strong> Navega por las pestañas superiores. Lee la teoría, visualiza los informes multimedia y resuelve las Misiones de Campo en tu cuaderno. 
-                </div>
 
-                <button class="btn-neon" onclick="startTimerAndNavigate()" style="animation: pulseAlert 2s infinite;">Iniciar Secuencia de Estudio</button>
+                <button class="btn-neon" onclick="startTimerAndNavigate()" style="animation: pulseAlert 2s infinite; font-size: 1.3rem; padding: 15px 40px; margin-top: 20px;">Iniciar Secuencia de Estudio</button>
             </div>
         </section>
 
-        <!-- PANTALLA 1: HISTORIA Y VARIEDADES -->
+        <!-- PANTALLA 1: HISTORIA PENINSULAR -->
         <section id="screen-historia" class="screen">
             <div class="glass-panel">
-                <h2 class="neon-text-purple"><i class="fa-solid fa-map-location-dot"></i> Fase 1: Desarrollo Sociohistórico y Variedades</h2>
+                <h2 class="neon-text-purple"><i class="fa-solid fa-timeline"></i> Fase 1: Desarrollo Sociohistórico Peninsular</h2>
                 
                 <div class="theory-box">
-                    <p>La historia de la Península Ibérica es un crisol de civilizaciones, y nuestro idioma es su cicatriz.</p>
+                    <p>La historia de la Península Ibérica es un crisol de invasiones y civilizaciones. Cada pueblo dejó su huella en el idioma, creando un mapa lingüístico complejo.</p>
                     <ul>
-                        <li><strong>Lenguas Prerromanas y Sustrato:</strong> Antes del 218 a.C., habitaban íberos, celtas, vascones y fenicios. Sus lenguas desaparecieron (salvo el <span class="highlight-purple">euskera</span>), pero dejaron un <em>sustrato</em> (palabras arraigadas como <em>barro, perro, cerveza</em>).</li>
-                        <li><strong>Romanización:</strong> El Imperio Romano impuso el <span class="highlight-purple">Latín Vulgar</span> (el del pueblo). De este latín, tras siglos de evolución y fragmentación (por la caída del Imperio), nacen las <strong>lenguas romances</strong> (castellano, gallego, catalán, francés, italiano...).</li>
-                        <li><strong>Superestratos:</strong> Los pueblos que invadieron pero no impusieron su lengua dejaron <em>superestratos</em>. Los visigodos (germanismos militares: <em>guerra, yelmo</em>) y los árabes (el <span class="highlight-purple">arabismo</span> aportó más de 4000 palabras: <em>alcalde, aceite, almohada</em>).</li>
-                        <li><strong>Mozárabe:</strong> Los cristianos que vivían bajo dominio musulmán (Al-Ándalus) hablaban dialectos romances (mozárabe), en los que se escribieron las <em>Jarchas</em> (primeros textos literarios). Mientras, en el norte, el romance castellano nacía en Cantabria (primeros testimonios: <em>Glosas Emilianenses</em>).</li>
+                        <li><strong>Lenguas Prerromanas y Sustrato:</strong> Antes del 218 a.C., la península estaba habitada por íberos, celtas, vascones, fenicios y griegos. Tras la invasión romana, sus lenguas desaparecieron casi por completo (a excepción del <span class="highlight-purple">euskera</span>), pero dejaron un <em>sustrato lingüístico</em> (palabras arraigadas en la tierra que los romanos adoptaron, como <em>barro, perro, arroyo, cerveza, conejo</em>).</li>
+                        <li><strong>La Romanización y el Latín Vulgar:</strong> Roma impuso su cultura, sus leyes y su idioma: el <span class="highlight-purple">Latín Vulgar</span> (el latín hablado por el pueblo, soldados y comerciantes, muy distinto del latín clásico de los filósofos). Con la caída del Imperio Romano en el 476 d.C., la península quedó aislada y el latín vulgar comenzó a evolucionar y fragmentarse de forma distinta en cada región, dando lugar siglos después a las <strong>lenguas romances</strong> (castellano, gallego, catalán, navarro-aragonés, astur-leonés...).</li>
+                        <li><strong>Superestratos:</strong> Los pueblos que invadieron la península pero NO lograron imponer su idioma dejaron un <em>superestrato</em>. Los visigodos dejaron germanismos asociados a la guerra (<em>guerra, espía, yelmo, Álvaro</em>). Posteriormente, en el 711 d.C., los árabes iniciaron su dominio (Al-Ándalus). El <span class="highlight-purple">arabismo</span> es el superestrato más importante del español, aportando más de 4000 palabras (la mayoría empiezan por al-: <em>alcalde, almohada, algodón, aceite, ajedrez</em>).</li>
+                        <li><strong>Mozárabe y Castellano:</strong> En territorio musulmán, los cristianos hablaban dialectos romances conocidos como <em>mozárabe</em>, lengua en la que se escribieron las <em>Jarchas</em> (los primeros textos literarios líricos). Simultáneamente, en el norte, en la zona de Cantabria, nacía un romance muy innovador: el castellano. Sus primeros balbuceos escritos se encuentran en las <em>Glosas Emilianenses y Silenses</em> (anotaciones en los márgenes de textos en latín hechas por monjes para entenderlos).</li>
                     </ul>
-                </div>
-
-                <!-- HUECO VÍDEO PROFESOR -->
-                <div class="video-container">
-                    <!-- PROFE: Inserta aquí tu vídeo local o iframe de YouTube sobre Origen del Español -->
-                    <p style="position:absolute; top:45%; width:100%; text-align:center; color:#94a3b8;">[ESPACIO PARA PROYECCIÓN MULTIMEDIA DEL PROFESOR - ORIGEN DEL ESPAÑOL]</p>
-                    <!-- <iframe src="URL_AQUI" frameborder="0" allowfullscreen></iframe> -->
                 </div>
 
                 <div class="map-container">
                     <div class="map-svg-wrap">
-                        <p style="color: var(--text-muted); margin-bottom: 10px;"><i>Haz clic en los territorios para acceder a su base de datos lingüística.</i></p>
-                        <!-- SVG Simplificado -->
+                        <p style="color: var(--text-muted); margin-bottom: 10px; font-weight: bold;">ESCÁNER TOPOGRÁFICO DE LENGUAS</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;"><i>Haz clic en los territorios para desencriptar su base de datos histórica.</i></p>
                         <svg viewBox="0 0 500 450" style="width: 100%; max-width: 400px; height: auto;">
                             <!-- Galicia -->
                             <path id="region-galicia" d="M 30,50 L 100,30 L 120,90 L 40,120 Z" onclick="showMapInfo('galicia')" />
@@ -256,32 +248,68 @@
                     </div>
                     <div class="info-panel" id="map-info-display">
                         <div style="text-align: center; color: var(--text-muted);">
-                            <i class="fa-solid fa-satellite-dish" style="font-size: 3rem; margin-bottom: 15px; opacity: 0.5;"></i>
-                            <p>Esperando señal del territorio...</p>
+                            <i class="fa-solid fa-satellite-dish" style="font-size: 4rem; margin-bottom: 15px; opacity: 0.3;"></i>
+                            <p style="font-family: 'Space Mono';">Esperando señal de satélite...</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="mt-2"><i class="fa-solid fa-globe"></i> Español de América y Sefardí</h3>
+                <div class="challenge-zone mt-2">
+                    <h4 style="color: var(--accent-gold);"><i class="fa-solid fa-pen-nib"></i> Misiones de Evolución e Historia</h4>
+                    <ol class="task-list">
+                        <li><strong>Arqueología Lingüística:</strong> Crea una tabla en tu cuaderno con tres columnas: <em>Sustrato Prerromano, Superestrato Germánico y Superestrato Árabe</em>. Clasifica las siguientes palabras aplicando la teoría leída: <em>almohada, barro, espía, alcalde, yelmo, perro, zanahoria, guerra, conejo, ajedrez</em>.</li>
+                        <li><strong>Análisis de Textos Primitivos:</strong> Lee este fragmento adaptado de las <em>Glosas Emilianenses</em> (siglo X): <em>"Cono aiutorio de nuestro dueno Christo..."</em> (Con la ayuda de nuestro señor Cristo). ¿Por qué estas anotaciones eran necesarias para los monjes? Explica en tu cuaderno la ruptura que se había producido entre el latín clásico escrito y el romance hablado por la gente común.</li>
+                        <li><strong>Mapa Lingüístico Vivo:</strong> Explica por escrito por qué el Euskera es considerado una "rareza" o un "milagro lingüístico" en el contexto de la Europa Occidental y la romanización.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANTALLA 2: EL ESPAÑOL EN EL MUNDO Y SEFARDÍ -->
+        <section id="screen-mundo" class="screen">
+            <div class="glass-panel">
+                <h2 class="neon-text"><i class="fa-solid fa-globe"></i> Fase 2: El Español de América, Sefardí y ELE</h2>
+                
                 <div class="theory-box">
-                    <p>El español no se limitó a la península. Hoy es hablado por casi 500 millones de personas, siendo una lengua internacional de primer orden (y muy estudiada como lengua extranjera).</p>
+                    <p>El español cruzó el océano en 1492 y hoy es la lengua materna de casi 500 millones de personas. No es una lengua uniforme, sino un mosaico de variedades dialectales que la enriquecen.</p>
                     <ul>
-                        <li><strong>Español de América:</strong> Llevado en 1492, se enriqueció enormemente con el <em>sustrato indígena</em> (indigenismos: <em>patata, tomate, huracán, canoa, chocolate</em>). Sus principales rasgos fonéticos y morfosintácticos son: el <span class="highlight">seseo</span> (común a toda América), el <span class="highlight">voseo</span> (usar 'vos' en lugar de 'tú', propio de Argentina, Uruguay, etc.), y el uso exclusivo de 'ustedes' en lugar de 'vosotros'.</li>
-                        <li><strong>El Sefardí (o Judeoespañol):</strong> Es el idioma hablado por los judíos sefardíes, expulsados de España por los Reyes Católicos en 1492. Conserva fonética y vocabulario del castellano del siglo XV, siendo una "cápsula del tiempo" viva en lugares como Turquía o Israel.</li>
+                        <li><strong>El Español de América:</strong> Al llegar a América, el español entró en contacto con cientos de lenguas indígenas (náhuatl, quechua, guaraní, taíno). Esto generó un riquísimo <em>sustrato indígena</em>, aportando indigenismos universales como <em>patata, tomate, chocolate, huracán, canoa, tiburón, tiza</em>. 
+                        <br><br>Sus principales rasgos fonéticos y morfosintácticos son:
+                            <ul>
+                                <li>El <span class="highlight">seseo</span>: Pronunciar C/Z como S (común a toda América, heredado del andaluz).</li>
+                                <li>El <span class="highlight">yeísmo</span>: Pronunciar LL como Y. (En Argentina y Uruguay adquiere un sonido especial vibrante llamado <em>zeísmo</em>).</li>
+                                <li>El <span class="highlight">voseo</span>: Uso del pronombre "vos" en lugar de "tú", con conjugaciones verbales propias (<em>"Vos cantás"</em> en vez de "Tú cantas"). Es el estándar en Argentina, Uruguay, Paraguay y Centroamérica.</li>
+                                <li>Sustitución de "vosotros" por "ustedes" para el plural informal en todo el continente.</li>
+                            </ul>
+                        </li>
+                        <li><strong>El Sefardí (o Judeoespañol):</strong> En 1492, los Reyes Católicos expulsaron a los judíos de España (los sefardíes). En su exilio por el norte de África, Turquía y los Balcanes, se llevaron consigo el castellano del siglo XV. Hoy en día, el sefardí sigue vivo. Es una <em>"cápsula del tiempo lingüística"</em> porque conserva palabras antiguas (dicen "fazer" por hacer, "fijo" por hijo, o "mansevo" por joven) y no sufrió las revoluciones fonéticas de los siglos XVI y XVII que sí vivió el español peninsular.</li>
+                        <li><strong>El Español como Lengua Extranjera (ELE):</strong> El español es la segunda lengua del mundo por número de hablantes nativos. Su estudio como lengua extranjera genera una enorme industria cultural y económica (turismo idiomático, Instituto Cervantes, editoriales).</li>
                     </ul>
                 </div>
 
+                <div class="text-analysis-box">
+                    <h4 style="color: var(--primary-neon);">Base de Datos Cifrada: Textos Comparativos</h4>
+                    <div class="blockquote-style">
+                        <strong>Texto A (Canción tradicional Sefardí):</strong><br>
+                        "Yo m'enamorí d'un aire, d'un aire d'una mujer... Faselo por el Dio del sielo, no me fagas padeçer."
+                    </div>
+                    <div class="blockquote-style">
+                        <strong>Texto B (Fragmento literatura argentina):</strong><br>
+                        "¿Vos te creés que sos el dueño del mundo? Andá a buscar tus cosas y vení mañana, que ustedes siempre arman un lío bárbaro acá."
+                    </div>
+                </div>
+
                 <div class="challenge-zone">
-                    <h4>Misiones de Evolución e Historia</h4>
+                    <h4 style="color: var(--accent-gold);"><i class="fa-solid fa-pen-nib"></i> Misiones de Dialectología Comparada</h4>
                     <ol class="task-list">
-                        <li><strong>Arqueología Lingüística:</strong> Haz una tabla en tu cuaderno con tres columnas: Sustrato Prerromano, Superestrato Germánico y Superestrato Árabe. Clasifica las siguientes palabras investigando su origen o deduciéndolo por la teoría: <em>almohada, barro, espía, alcalde, yelmo, perro, zanahoria, guerra, conejo</em>.</li>
-                        <li><strong>El Enigma Americano:</strong> El español de América tiene variaciones morfosintácticas clave. Traduce al español de Argentina (usando el <em>voseo</em>) la siguiente frase peninsular: <em>"Tú cantas muy bien, ¿quieres venir a mi casa vosotros dos?"</em>.</li>
-                        <li><strong>Cápsula del Tiempo:</strong> El sefardí conserva rasgos del siglo XV. Si un sefardí escribe "Fazer" y "Fijo", ¿qué fenómeno fonético histórico del castellano (evolución de la F- inicial latina) no se aplicó en su exilio?</li>
+                        <li><strong>Traductor Transatlántico:</strong> Analiza el <em>Texto B</em>. Subraya en tu cuaderno todas las marcas de "voseo" (pronombres y formas verbales) y el uso de "ustedes". A continuación, traduce el fragmento completo al estándar del castellano peninsular central.</li>
+                        <li><strong>La Cápsula del Tiempo:</strong> Analiza el <em>Texto A</em> (Sefardí). ¿Qué rasgo fonético histórico del castellano antiguo observas en las palabras "Faselo" y "fagas"? ¿Cómo han evolucionado esas palabras en el español actual?</li>
+                        <li><strong>Vocabulario de Ida y Vuelta:</strong> Elabora una lista de 5 palabras que provengan del sustrato indígena americano (indigenismos) que uses en tu vida diaria y explica de qué campo semántico provienen mayoritariamente (pista: flora, fauna, clima).</li>
                     </ol>
                 </div>
 
                 <h3 class="mt-2"><i class="fa-solid fa-microchip"></i> Terminal de Emparejamiento Histórico</h3>
-                <p style="color: var(--text-muted);">Empareja cada concepto con su definición correcta para desencriptar los datos. (50 XP por acierto)</p>
+                <p style="color: var(--text-muted);">Empareja cada concepto con su definición correcta para asentar los conceptos. (50 XP por acierto)</p>
                 <div class="match-game" id="match-game-container">
                     <div class="terms-container" id="terms-container"></div>
                     <div class="defs-container" id="defs-container"></div>
@@ -289,106 +317,115 @@
             </div>
         </section>
 
-        <!-- PANTALLA 2: CONTACTO Y DERECHOS -->
+        <!-- PANTALLA 3: CONTACTO Y DERECHOS -->
         <section id="screen-contacto" class="screen">
             <div class="glass-panel">
-                <h2 class="neon-text-gold"><i class="fa-solid fa-scale-balanced"></i> Fase 2: Fenómenos de Contacto y Marco Legal</h2>
+                <h2 class="neon-text-gold"><i class="fa-solid fa-scale-balanced"></i> Fase 3: Fenómenos de Contacto y Derechos Lingüísticos</h2>
                 
                 <div class="theory-box">
-                    <p>Cuando dos lenguas conviven en un mismo territorio o en un mismo hablante, se producen <strong>fenómenos de contacto</strong>:</p>
+                    <h3 style="margin-top:0; font-size: 1.4rem;">1. Fenómenos de Contacto entre Lenguas</h3>
+                    <p>Las lenguas no viven aisladas. Cuando dos lenguas conviven en un mismo territorio geográfico o en el cerebro de un mismo hablante, se producen colisiones y transferencias:</p>
                     <ul>
-                        <li><span class="highlight">Bilingüismo:</span> Uso habitual de dos lenguas en una misma región o por una misma persona en <strong>igualdad de condiciones</strong> y prestigio.</li>
-                        <li><span class="highlight">Diglosia:</span> Desequilibrio total. Dos lenguas conviven, pero una tiene prestigio (se usa en leyes, escuela, televisión) y la otra queda relegada al ámbito familiar, rural o coloquial (diglosia lingüística o dialectal).</li>
-                        <li><span class="highlight">Préstamos:</span> Adopción de una palabra de otra lengua adaptando su pronunciación y ortografía (ej. del inglés: <em>fútbol, escáner, mitin</em>).</li>
-                        <li><span class="highlight">Interferencias (y calcos):</span> Influencia no deseada o error al aplicar las reglas de una lengua sobre otra por falta de competencia. (Ej. traducir literalmente <em>"Science fiction"</em> como ciencia ficción, o en Cataluña decir <em>"hacer un café"</em> por influencia del catalán <em>fer un cafè</em>).</li>
+                        <li><span class="highlight">Bilingüismo:</span> Situación ideal donde se usan dos lenguas de forma habitual en un mismo territorio o por una persona, en situación de <strong>total igualdad, prestigio y funcionalidad</strong>.</li>
+                        <li><span class="highlight">Diglosia:</span> Situación de desequilibrio e injusticia lingüística. Dos lenguas conviven, pero una tiene un prestigio alto (se usa en el gobierno, la educación, la prensa) y la otra es relegada a la "variedad baja" (solo se usa oralmente en el ámbito familiar, coloquial o rural). Esto puede llevar a la desaparición de la lengua dominada. Existe también la <em>diglosia dialectal</em> (ej. considerar que el castellano de Valladolid sirve para dar las noticias y el andaluz solo sirve para contar chistes).</li>
+                        <li><span class="highlight">Préstamos Lingüísticos:</span> Palabras que un idioma toma de otro para nombrar realidades nuevas. Si se adaptan a la ortografía española son préstamos asimilados (ej. <em>fútbol, escáner, mitin</em>). Si se mantienen en su forma original son extranjerismos crudos (ej. <em>software, hardware, boutique</em>).</li>
+                        <li><span class="highlight">Interferencias (y Calcos):</span> Es un error provocado por el contacto. Un hablante aplica las reglas gramaticales o léxicas de la Lengua A cuando está hablando en la Lengua B. Un tipo grave es el <em>calco semántico</em> (traducir literalmente una expresión extranjera: ej. decir "ciencia ficción" del inglés <em>science fiction</em>, o decir "aplicar a un trabajo" copiando <em>to apply</em>, cuando en español es "presentarse a un puesto").</li>
                     </ul>
                 </div>
 
                 <div class="theory-box" style="border-color: var(--secondary-neon);">
-                    <h3 style="margin-top:0; font-size: 1.3rem;">Derechos Lingüísticos (Constitución y Sostenibilidad)</h3>
-                    <p>El <strong>Artículo 3 de la Constitución de 1978</strong> regula este patrimonio:</p>
+                    <h3 style="margin-top:0; font-size: 1.4rem;">2. El Marco Legal y la Sostenibilidad Lingüística</h3>
+                    <p>El <strong>Artículo 3 de la Constitución Española de 1978</strong> es el pilar de nuestros derechos:</p>
                     <ol>
-                        <li>El <strong>castellano</strong> es la lengua española oficial del Estado. Todos tienen el deber de conocerla y el derecho a usarla.</li>
-                        <li>Las demás lenguas serán también <strong>oficiales</strong> en las respectivas Comunidades Autónomas según sus Estatutos (Gallego, Euskera, Catalán/Valenciano y Aranés). <em>(Régimen de cooficialidad)</em>.</li>
+                        <li>El <span class="highlight-purple">castellano</span> es la lengua española oficial del Estado. Todos los españoles tienen el <strong>deber</strong> de conocerla y el derecho a usarla.</li>
+                        <li>Las demás lenguas españolas serán también <span class="highlight-purple">oficiales en las respectivas Comunidades Autónomas</span> de acuerdo con sus Estatutos. (Esto instaura el régimen de cooficialidad para el Gallego, Euskera, Catalán/Valenciano y el Aranés).</li>
+                        <li>La riqueza de las distintas modalidades lingüísticas de España es un <strong>patrimonio cultural</strong> que será objeto de especial respeto y protección.</li>
                     </ol>
-                    <p class="mt-2">Es crucial diferenciar una <span class="highlight">Lengua Minoritaria</span> (lengua hablada por pocas personas demográficamente, lo cual es natural) de una <span class="highlight">Lengua Minorizada</span> (lengua que ha sufrido represión política, social o histórica que ha impedido su desarrollo normal). Para salvar lenguas minorizadas, los gobiernos aplican políticas de <strong>Normalización Lingüística</strong> (fomentar su uso en la educación y administración) promoviendo la <em>sostenibilidad lingüística</em> y el respeto (Estrategias de reflexión interlingüística).</p>
+                    <p class="mt-2"><strong>Lengua Minoritaria vs. Lengua Minorizada:</strong> Una lengua minoritaria es simplemente aquella que tiene pocos hablantes por cuestiones demográficas. Sin embargo, una <strong>lengua minorizada</strong> es aquella que ha sufrido marginación, persecución política o presión social histórica, impidiendo su uso normal (sufriendo diglosia). Para protegerlas, las instituciones aplican políticas de <span class="highlight-purple">Normalización Lingüística</span>: leyes y estrategias (en la escuela, en la TV pública, en las señales de tráfico) para devolver a esa lengua minorizada su prestigio y garantizar la <strong>sostenibilidad lingüística</strong> del planeta.</p>
                 </div>
 
                 <!-- HUECO VÍDEO PROFESOR -->
                 <div class="video-container">
-                    <!-- PROFE: Inserta aquí tu vídeo local o iframe de YouTube sobre Bilingüismo y Diglosia -->
-                    <p style="position:absolute; top:45%; width:100%; text-align:center; color:#94a3b8;">[ESPACIO PARA PROYECCIÓN MULTIMEDIA DEL PROFESOR - DIGLOSIA Y CONSTITUCIÓN]</p>
+                    <p class="video-placeholder-text">[ESPACIO PARA PROYECCIÓN MULTIMEDIA DEL PROFESOR - DIGLOSIA Y CONSTITUCIÓN]</p>
+                    <!-- PROFE: <iframe src="URL" frameborder="0" allowfullscreen></iframe> -->
                 </div>
 
                 <div class="challenge-zone">
-                    <h4>Misiones de Contacto y Derechos</h4>
+                    <h4 style="color: var(--accent-gold);"><i class="fa-solid fa-scale-balanced"></i> Misiones de Contacto y Jurisprudencia</h4>
                     <ol class="task-list">
-                        <li><strong>El Diagnóstico Sociolingüístico:</strong> Imagina una región donde la Lengua A se usa para redactar leyes, emitir telediarios y dar clases en la universidad. La Lengua B solo se usa para hablar con los abuelos en el pueblo y contar chistes. ¿Es un caso de bilingüismo o de diglosia? ¿Cuál de las dos lenguas crees que está "minorizada" y qué políticas de normalización aplicarías para salvarla?</li>
-                        <li><strong>Caza de Préstamos e Interferencias:</strong> Analiza estas frases e indica si contienen un préstamo adaptado, un extranjerismo crudo (sin adaptar) o una interferencia/calco:
+                        <li><strong>El Caso Clínico (Bilingüismo vs Diglosia):</strong> Imagina una región imaginaria llamada "Tierra del Sur". En los tribunales, en la universidad y en los periódicos solo se escribe y se habla en la Lengua Alfa. Sin embargo, cuando los ciudadanos llegan a sus casas o van al mercado del pueblo, hablan en la Lengua Beta, que nunca se escribe formalmente. ¿Estamos ante un caso de bilingüismo o de diglosia? ¿Cuál es la lengua minorizada? Justifica tu respuesta usando la teoría.</li>
+                        <li><strong>Brigada de Corrección (Interferencias):</strong> El contacto abusivo con el inglés en internet genera interferencias graves. Reescribe estas frases en tu cuaderno eliminando el "calco" o "extranjerismo" y usando un español normativo:
                             <ul>
-                                <li><em>"Me voy a comprar un ratón (mouse) nuevo para el ordenador."</em></li>
-                                <li><em>"Hicimos un meeting (reunión) online."</em></li>
-                                <li><em>"Tenemos que aplicar a esa oferta de trabajo."</em> (Calco del inglés 'to apply', en español sería 'presentarse').</li>
+                                <li><em>"Ese evento es totalmente bizarro, nunca vi nada igual."</em> (Cuidado, 'bizarre' en inglés es raro, pero 'bizarro' en español significa otra cosa).</li>
+                                <li><em>"Voy a chequear mis emails en el smartphone para ver si he aplicado bien al puesto."</em></li>
                             </ul>
                         </li>
-                        <li><strong>Reflexión Jurídica:</strong> Según el Artículo 3, ¿tienes el "deber" constitucional de conocer el Euskera si vives en Bilbao? Justifica tu respuesta separando el estatus del Castellano frente a las lenguas cooficiales.</li>
+                        <li><strong>Tribunal Constitucional:</strong> Si un ciudadano nacido en Bilbao decide que, por rebeldía, se niega a aprender castellano y solo quiere saber euskera, ¿qué punto exacto del Artículo 3 de la Constitución está violando? Explícalo con tus palabras.</li>
                     </ol>
                 </div>
             </div>
         </section>
 
-        <!-- PANTALLA 3: ANDALUZ Y PREJUICIOS -->
+        <!-- PANTALLA 4: EL ANDALUZ Y LOS PREJUICIOS -->
         <section id="screen-andalucia" class="screen">
             <div class="glass-panel">
-                <h2 class="neon-text" style="color: var(--success);"><i class="fa-brands fa-envira"></i> Fase 3: Las Hablas Andaluzas y los Prejuicios</h2>
+                <h2 class="neon-text" style="color: var(--success);"><i class="fa-brands fa-envira"></i> Fase 4: Las Hablas Andaluzas y los Prejuicios Lingüísticos</h2>
                 
                 <div class="theory-box">
-                    <p>Atención, Agente. El andaluz <strong>no es un idioma distinto</strong> ni proviene directamente del latín, tampoco es un castellano mal hablado. Es una <strong>modalidad lingüística</strong> o dialecto histórico del español meridional, originado durante la repoblación de los siglos XIII al XV.</p>
-                    <p>Presenta innovaciones fonéticas muy rápidas que han influido en el español de América (andalucismo). Tradicionalmente se divide en Andaluz Occidental y Oriental. Principales rasgos:</p>
+                    <p>Atención, Agente. Entramos en un terreno lleno de mitos que debes destruir. <strong>El andaluz no es un idioma independiente</strong> ni proviene directamente del latín, y por supuesto, <strong>tampoco es un castellano mal hablado ni corrompido</strong>. Es una modalidad lingüística (o dialecto histórico) del español meridional, originado durante la repoblación del sur peninsular entre los siglos XIII y XV.</p>
+                    <p>El andaluz es sumamente innovador y evoluciona rápido aplicando la ley de la <em>economía del lenguaje</em>. Sus principales rasgos son:</p>
                     <ul>
-                        <li><span class="highlight">Seseo y Ceceo:</span> Confusión de /s/ y /θ/. (Seseo: <em>sapato, sielo</em>. Ceceo: <em>zolo, kaza</em>). El seseo tiene mucho prestigio en zonas urbanas como Sevilla; el ceceo suele ser más rural o costero.</li>
-                        <li><span class="highlight">Yeísmo:</span> Pronunciar la 'll' como 'y' (<em>yuvia, cabayo</em>). Rasgo hoy casi general en España.</li>
-                        <li><span class="highlight">Aspiración o pérdida de consonantes finales/implosivas:</span> (<em>loh niñoh, er niño, farta</em>).</li>
-                        <li><span class="highlight">Morfosintaxis:</span> Uso de "ustedes" con verbo en 3ª persona para trato informal (<em>¿Ustedes van a salir?</em> en lugar de <em>¿Vosotros vais?</em>) en Andalucía Occidental.</li>
+                        <li><span class="highlight">Seseo:</span> Pronunciar la 'c/z' como 's' (Ej: <em>sapato, sielo, sena</em>). Está extendidísimo y tiene mucho prestigio social, especialmente en grandes urbes como Sevilla o Córdoba, y es la norma en América.</li>
+                        <li><span class="highlight">Ceceo:</span> Pronunciar la 's' como 'z' (Ej: <em>zolo, kaza, zervesa</em>). Tradicionalmente ha estado más estigmatizado como rural, pero es amplísimo en Huelva, Cádiz y sur de Sevilla.</li>
+                        <li><span class="highlight">Yeísmo:</span> Pronunciar la 'll' como 'y' (Ej: <em>yuvia, cabayo</em>). Rasgo hoy casi generalizado en toda España.</li>
+                        <li><span class="highlight">Aspiración y pérdida consonántica:</span> Relajación de consonantes a final de sílaba o palabra. Aspiración de la -s implosiva (<em>loh niñoh</em>). Pérdida de la -d- intervocálica, sobre todo en participios (<em>pescao, sentao, aburrío</em>). Igualación o confusión de l/r finales (<em>er niño, farta de respeto, arcarde</em>).</li>
+                        <li><span class="highlight">Morfosintaxis (El "Ustedes"):</span> En Andalucía Occidental (Cádiz, Huelva, Sevilla...) se sustituye el "vosotros" por "ustedes" para el trato de confianza e informal, pero se combina con el verbo en 3ª persona del plural. (Ej: <em>"¿Ustedes saben a qué hora es la fiesta?"</em> en lugar del normativo <em>"¿Vosotros sabéis...?"</em>).</li>
                     </ul>
                 </div>
 
                 <div class="theory-box" style="border-color: var(--danger); background: rgba(255, 51, 102, 0.05);">
-                    <h3 style="margin-top:0; color: var(--danger);">Detección de Prejuicios y Estereotipos</h3>
-                    <p>Lamentablemente, el andaluz ha sufrido (y sufre) <strong>estereotipos etnolingüísticos</strong> en medios de comunicación y sociedad (la falsa idea de que suena "inculto", "cómico" o que es de vagos porque "se comen letras"). Combatir el prejuicio requiere entender que <strong>todas las variedades dialectales son sistemas lingüísticamente perfectos y lógicos</strong>. El andaluz evoluciona aplicando la ley del mínimo esfuerzo articulatorio (economía del lenguaje), al igual que el latín evolucionó para convertirse en castellano.</p>
+                    <h3 style="margin-top:0; color: var(--danger);">La Lucha contra los Prejuicios y Estereotipos Etnolingüísticos</h3>
+                    <p>A pesar de su riqueza, el andaluz sufre constantes <strong>prejuicios lingüísticos</strong> (valoraciones negativas sin base científica) y <strong>estereotipos etnolingüísticos</strong> (asociar una forma de hablar con defectos de carácter). En los medios de comunicación históricamente se ha usado el acento andaluz para personajes cómicos, sirvientes o personas sin estudios (diglosia mediática).</p>
+                    <p>Mucha gente de fuera de Andalucía afirma: <em>"Los andaluces hablan mal porque se comen letras"</em> o <em>"El andaluz es de vagos"</em>. La lingüística moderna desmonta esto tajantemente: <strong>Todas las variedades dialectales son sistemas fonéticos perfectos y estructurados</strong>. El andaluz no se "come letras", simplemente aplica la economía articulatoria. Si quitar letras fuera síntoma de hablar mal, el francés (que no pronuncia la mitad de lo que escribe) o el latín vulgar (que perdió sus declinaciones para convertirse en castellano) también estarían mal hablados.</p>
+                </div>
+
+                <!-- HUECO VÍDEO PROFESOR -->
+                <div class="video-container">
+                    <p class="video-placeholder-text">[ESPACIO PARA PROYECCIÓN MULTIMEDIA DEL PROFESOR - ACENTOS DE ANDALUCÍA Y ESTEREOTIPOS]</p>
                 </div>
 
                 <div class="challenge-zone">
-                    <h4>Misiones de Análisis Dialectal y Debate</h4>
+                    <h4 style="color: var(--accent-gold);"><i class="fa-solid fa-bullhorn"></i> Misiones de Defensa Dialectal</h4>
                     <ol class="task-list">
-                        <li><strong>Traductor Morfosintáctico:</strong> Reescribe la siguiente oración en andaluz occidental informal usando el pronombre "ustedes" correctamente: <em>"Vosotros siempre llegáis tarde, a ver si os calláis un poco".</em></li>
-                        <li><strong>Identificación Fonética:</strong> Si un hablante pronuncia "El arcarde ha comío pescao frito", ¿qué tres fenómenos fonéticos típicos del andaluz se están produciendo? (Fíjate en la L/R, en la D intervocálica y en la pronunciación de los participios).</li>
-                        <li><strong>Tribunal contra el Prejuicio (Debate escrito):</strong> Escucha a alguien decir: <em>"En Andalucía hablan muy mal, no saben pronunciar las eses finales y dicen 'zapato' con S. Están destrozando el diccionario."</em>. Escribe en tu cuaderno una defensa de 10 líneas utilizando argumentos lingüísticos, históricos y el concepto de "evolución natural / economía del lenguaje" para demostrarle que su prejuicio carece de base científica.</li>
+                        <li><strong>Traductor Morfosintáctico:</strong> Reescribe la siguiente oración normativa en <em>andaluz occidental informal</em>, haciendo uso correcto del pronombre "ustedes" y su concordancia verbal: <em>"Vosotros siempre llegáis tarde a clase, a ver si os calláis un poco y prestáis atención".</em></li>
+                        <li><strong>Identificación Fonética Forense:</strong> Escuchas a un hablante decir: <em>"El arcarde ha comío un buen pescao frito."</em> Analiza la oración en tu cuaderno y enumera los tres fenómenos fonéticos típicos del andaluz que se están produciendo en las palabras subrayadas tácitamente.</li>
+                        <li><strong>Ensayo de Combate (Reflexión Crítica):</strong> Imagina que en un foro de internet un usuario publica: <em>"En Andalucía destrozan el diccionario, no saben pronunciar las eses y dicen zapato con S. Hablan fatal."</em>. Escribe un párrafo de 8-10 líneas en tu cuaderno rebatiendo este <strong>prejuicio lingüístico</strong>. Usa argumentos científicos: nombra los fenómenos fonéticos (seseo, aspiración) y explica por qué la evolución de una lengua no significa "hablar mal".</li>
                     </ol>
                 </div>
 
-                <h3 class="mt-2"><i class="fa-solid fa-flask"></i> Laboratorio de Identificación Fonética</h3>
-                <p style="color: var(--text-muted);">Arrastra o haz clic para clasificar las expresiones escuchadas según el fenómeno andaluz que representan.</p>
+                <h3 class="mt-2"><i class="fa-solid fa-flask"></i> Laboratorio Interactivo: Clasificación Fonética</h3>
+                <p style="color: var(--text-muted);">Haz clic en una transcripción fonética y luego en la caja de la anomalía que representa para enviarla a análisis. (25 XP/acierto)</p>
                 
                 <div class="words-pool" id="andalucia-words">
                     <!-- Palabras inyectadas por JS -->
                 </div>
-                <div class="traits-grid" id="andalucia-drops">
+
+                <div class="traits-grid" id="andalucia-drops" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
                     <div class="trait-drop" data-trait="seseo"><h4>Seseo</h4></div>
                     <div class="trait-drop" data-trait="ceceo"><h4>Ceceo</h4></div>
                     <div class="trait-drop" data-trait="yeismo"><h4>Yeísmo</h4></div>
-                    <div class="trait-drop" data-trait="aspiracion_perdida"><h4>Pérdida/Aspiración</h4></div>
+                    <div class="trait-drop" data-trait="aspiracion_perdida"><h4>Aspiración/Pérdida</h4></div>
                     <div class="trait-drop" data-trait="morfosintaxis"><h4>Morfosintaxis</h4></div>
                 </div>
             </div>
         </section>
 
-        <!-- PANTALLA 4: QUIZ Y ROSSETA BOSS -->
+        <!-- PANTALLA 5: QUIZ FINAL Y ROSETTA -->
         <section id="screen-quiz" class="screen">
-            <div class="glass-panel">
-                <h2 class="neon-text-gold"><i class="fa-solid fa-server"></i> Fase 4: Simulador de Evaluación Final</h2>
+            <div class="glass-panel" style="border-color: var(--primary-neon);">
+                <h2 class="neon-text"><i class="fa-solid fa-server"></i> Fase 5: Simulador de Evaluación Final</h2>
                 
-                <p style="font-size: 1.1rem; margin-bottom: 20px;">Responde al interrogatorio. (100 XP por respuesta correcta)</p>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Atención Agente. Responde al interrogatorio seleccionando la respuesta correcta. (100 XP por acierto)</p>
 
                 <div id="quiz-container" style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 15px; border: 1px solid var(--glass-border);">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
@@ -400,11 +437,12 @@
                     </div>
                 </div>
 
-                <div id="rosetta-section" class="hidden" style="margin-top: 40px; border-top: 2px dashed var(--accent-gold); padding-top: 30px;">
-                    <h2 class="neon-text" style="color: var(--accent-gold); text-align: center;">
-                        <i class="fa-solid fa-key"></i> La Cerradura Rosetta
+                <!-- BLOQUE ROSETTA (Se muestra tras el quiz) -->
+                <div id="rosetta-section" class="hidden" style="margin-top: 50px; border-top: 2px dashed var(--accent-gold); padding-top: 30px;">
+                    <h2 class="neon-text-gold" style="text-align: center; text-shadow: 0 0 15px var(--accent-gold);">
+                        <i class="fa-solid fa-key"></i> La Cerradura Rosetta Constitucional
                     </h2>
-                    <p class="text-center" style="margin-bottom: 20px;">Para desbloquear el diploma, configura los diales con la traducción correcta de <strong>"HOLA / GRACIAS"</strong> en las lenguas cooficiales.</p>
+                    <p class="text-center" style="margin-bottom: 30px; font-size: 1.1rem;">Para desencriptar el Diploma Final, demuestra tu respeto a la normalización lingüística. Configura los diales con la traducción correcta de <strong>"HOLA / GRACIAS"</strong> en las cuatro lenguas amparadas por la cooficialidad.</p>
                     
                     <div class="rosetta-grid">
                         <div class="lang-dial">
@@ -450,26 +488,27 @@
                     </div>
 
                     <div class="text-center">
-                        <button class="btn-neon" onclick="checkBossLock()">Desbloquear Mecanismo</button>
-                        <p id="boss-error" style="color: var(--danger); margin-top: 15px; display: none;"><i class="fa-solid fa-xmark"></i> Combinación incorrecta. Revisa la cooficialidad.</p>
+                        <button class="btn-neon" onclick="checkBossLock()" style="font-size: 1.3rem; padding: 15px 40px; margin-top: 20px;">Desbloquear Diploma</button>
+                        <p id="boss-error" style="color: var(--danger); margin-top: 15px; display: none; font-size: 1.2rem;"><i class="fa-solid fa-xmark"></i> Combinación incorrecta. Revisa tus conocimientos.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PANTALLA 5: DIPLOMA FINAL -->
+        <!-- PANTALLA 6: DIPLOMA FINAL -->
         <section id="screen-end" class="screen">
-            <div class="glass-panel" style="background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(188,19,254,0.1)); border: 2px solid var(--accent-gold); text-align: center;">
+            <div class="glass-panel" style="background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(188,19,254,0.1)); border: 2px solid var(--accent-gold); text-align: center; margin: 4rem auto; max-width: 800px;">
                 <i class="fa-solid fa-award" style="font-size: 6rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
-                <h1 class="neon-text" style="color: var(--accent-gold);">¡Misión Cumplida!</h1>
-                <h2>Diploma de Criptografía Lingüística (Nivel 5 BOJA)</h2>
+                <h1 class="neon-text-gold" style="font-size: 3rem;">¡Misión Cumplida!</h1>
+                <h2 style="color: white; margin-bottom: 2rem;">Diploma de Inteligencia Lingüística</h2>
                 
-                <div class="theory-box" style="text-align: left; border-color: var(--success);">
-                    <p>Has demostrado un dominio total sobre el desarrollo histórico del español, la riqueza de las variedades dialectales y el marco legal que ampara nuestros derechos lingüísticos. Has desmantelado prejuicios y reconocido al andaluz como un patrimonio vivo.</p>
+                <div class="theory-box" style="text-align: left; border-color: var(--success); font-size: 1.1rem; line-height: 1.8;">
+                    <p>Agente, has demostrado un dominio total sobre el desarrollo histórico del español, la riqueza de las variedades dialectales y el complejo marco legal que ampara nuestros derechos lingüísticos en la Constitución.</p>
+                    <p>Has detectado y desmantelado prejuicios inaceptables, reconociendo al andaluz y al resto de lenguas como un patrimonio vivo que debe protegerse mediante la normalización y la sostenibilidad lingüística.</p>
                 </div>
 
-                <div style="font-family: 'Space Mono', monospace; font-size: 1.5rem; margin: 30px 0;">
-                    <p>Puntuación: <span id="final-score" style="color: var(--primary-neon);">0</span> XP</p>
+                <div style="font-family: 'Space Mono', monospace; font-size: 1.8rem; margin: 30px 0; color: white;">
+                    <p>Puntuación Final: <span id="final-score" style="color: var(--success); font-weight: bold;">0</span> XP</p>
                     <p>Tiempo de Misión: <span id="final-time" style="color: var(--primary-neon);">00:00</span></p>
                 </div>
             </div>
@@ -478,18 +517,17 @@
     </main>
 
     <footer>
-        <p><strong>Departamento de Lengua Castellana y Literatura. IES San José de la Rinconada. 2026</strong></p>
-        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Material didáctico interactivo adaptado a los saberes básicos del Bloque A de 1º de Bachillerato (LOMLOE).</p>
+        <p style="font-size: 1.1rem; color: #fff; letter-spacing: 1px;"><strong>Departamento de Lengua Castellana y Literatura. IES San José de la Rinconada. 2026</strong></p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #64748b;">Material didáctico interactivo adaptado a los saberes básicos del Bloque A de 1º de Bachillerato (LOMLOE Andalucía).</p>
     </footer>
 
     <!-- ==================== LÓGICA JAVASCRIPT ==================== -->
     <script>
-        // --- NAVEGACIÓN Y ESTADO ---
+        // --- 1. ESTADO GLOBAL Y NAVEGACIÓN (SPA) ---
         let state = {
             score: 0,
             timeElapsed: 0,
-            timerInterval: null,
-            quizCompleted: false
+            timerInterval: null
         };
 
         const navLinks = document.querySelectorAll('#main-nav a');
@@ -501,7 +539,6 @@
             
             document.getElementById(targetId).classList.add('active');
             
-            // Activar link correcto (excepto si viene del inicio)
             const activeLink = document.querySelector(`#main-nav a[href="#${targetId}"]`);
             if(activeLink) activeLink.classList.add('active');
             
@@ -540,39 +577,38 @@
             }, 300);
         }
 
-        // --- MAPA ---
+        // --- 2. MAPA INTERACTIVO (Fase 1) ---
         const mapData = {
-            galicia: { title: "Gallego (Galicia)", text: "Lengua romance. Cooficial según su Estatuto. Experimentó un 'Rexurdimento' literario en el siglo XIX." },
-            euskadi: { title: "Euskera (País Vasco y Navarra)", text: "Lengua prerromana aislada. No procede del latín. Se unificó en 1968 bajo el modelo de 'Euskera Batua'." },
-            cataluna: { title: "Catalán / Valenciano", text: "Lengua romance. Cooficial en Cataluña, Baleares y Comunidad Valenciana. El Aranés (variante occitana) también es oficial en el Valle de Arán." },
-            castellano: { title: "Castellano (Español)", text: "Lengua oficial del Estado (Art. 3 Const.). Lengua romance originada en Cantabria, hoy expandida por España y América." },
-            andalucia: { title: "Modalidades Andaluzas", text: "Dialecto histórico del castellano. Fonética innovadora (seseo, ceceo, yeísmo) de gran influencia en el Español de América (andalucismo)." }
+            galicia: { title: "Gallego (Galicia)", text: "Lengua romance que formó unidad con el portugués en la Edad Media (galaicoportugués). Tras los Siglos Oscuros, experimentó un 'Rexurdimento' en el s.XIX con Rosalía de Castro. Cooficial según el Estatuto de Autonomía." },
+            euskadi: { title: "Euskera (País Vasco y Navarra)", text: "El gran enigma. Lengua prerromana y aislada, sin parentesco indoeuropeo conocido. Sobrevivió a los romanos y a los árabes. Fue unificada ortográficamente en 1968 (Euskera Batua)." },
+            cataluna: { title: "Catalán / Valenciano", text: "Lengua romance expandida durante la Reconquista. Cooficial en Cataluña, Baleares y Comunidad Valenciana (donde recibe el nombre estatutario de valenciano). Pompeu Fabra fue clave en su normalización." },
+            castellano: { title: "Castellano (Español)", text: "Originario como un dialecto muy innovador del latín en la zona de Cantabria/Burgos. Su expansión política y literaria lo convirtió en la lengua oficial del Estado español (Art. 3 de la Constitución)." },
+            andalucia: { title: "Mozárabe y Hablas Andaluzas", text: "Históricamente fue territorio de dialectos romances cristianos bajo dominio árabe (Mozárabe, cuna de las Jarchas). Hoy es el hogar del andaluz, modalidad dialectal con fortísima influencia en el español de América." }
         };
 
         function showMapInfo(regionId) {
             const data = mapData[regionId];
             document.getElementById('map-info-display').innerHTML = `
                 <div style="animation: fadeIn 0.5s;">
-                    <h3 style="color: var(--primary-neon);">${data.title}</h3>
-                    <p style="color: #e2e8f0;">${data.text}</p>
+                    <h3 style="color: var(--primary-neon); margin-bottom: 10px;">${data.title}</h3>
+                    <p style="color: #e2e8f0; line-height: 1.6;">${data.text}</p>
                 </div>`;
             document.querySelectorAll('svg path').forEach(p => p.style.fill = '#1f2937');
             document.getElementById(`region-${regionId}`).style.fill = 'var(--secondary-neon)';
-            updateScore(10);
+            updateScore(15);
         }
 
-        // --- JUEGO DE EMPAREJAMIENTO (MATCH) ---
+        // --- 3. MATCH GAME (Fase 1 & 2) ---
         const matchData = [
-            { id: 1, term: "Sustrato", def: "Rasgos de una lengua desaparecida que quedan en la lengua invasora (ej. celta o íbero en el latín)." },
-            { id: 2, term: "Superestrato", def: "Influencia de un pueblo invasor cuya lengua no llega a imponerse (ej. germanismos y arabismos)." },
-            { id: 3, term: "Mozárabe", def: "Conjunto de hablas romances usadas por los cristianos en territorio de Al-Ándalus." },
-            { id: 4, term: "Sefardí", def: "Variedad del judeoespañol que conserva rasgos fonéticos y léxicos del castellano del siglo XV." },
-            { id: 5, term: "Latín Vulgar", def: "Variedad oral del latín hablada por soldados y pueblo, de la que nacieron las lenguas romances." },
-            { id: 6, term: "Lengua Romance", def: "Familia de lenguas derivadas de la evolución del latín (castellano, gallego, catalán, francés)." }
+            { id: 1, term: "Sustrato", def: "Influencia lingüística de una lengua desaparecida sobre la lengua que se impone en su territorio (ej. celtismos en el latín)." },
+            { id: 2, term: "Superestrato", def: "Influencia de la lengua de un pueblo conquistador que no llega a imponerse y desaparece (ej. germanismos de los visigodos)." },
+            { id: 3, term: "Mozárabe", def: "Conjunto de hablas romances usadas por los habitantes cristianos en el territorio musulmán de Al-Ándalus." },
+            { id: 4, term: "Sefardí", def: "Variedad del judeoespañol hablada por los judíos expulsados en 1492. Conserva rasgos fonéticos del castellano del siglo XV." },
+            { id: 5, term: "Glosas Emilianenses", def: "Anotaciones realizadas en el siglo X en los márgenes de textos latinos; primer testimonio escrito del romance castellano." },
+            { id: 6, term: "Latín Vulgar", def: "Variedad oral del latín hablada por el pueblo llano, soldados y comerciantes, base de la que nacieron todas las lenguas romances." }
         ];
 
         let selectedTerm = null;
-        let matchesFound = 0;
 
         function initMatchGame() {
             const termsCont = document.getElementById('terms-container');
@@ -607,7 +643,7 @@
             if(selectedTerm.id === id) {
                 defBox.classList.add('matched'); selectedTerm.element.classList.add('matched');
                 selectedTerm.element.classList.remove('selected');
-                updateScore(50); selectedTerm = null; matchesFound++;
+                updateScore(50); selectedTerm = null;
             } else {
                 defBox.style.borderColor = 'var(--danger)';
                 setTimeout(() => defBox.style.borderColor = 'var(--text-muted)', 500);
@@ -615,12 +651,16 @@
             }
         }
 
-        // --- ANDALUZ DRAG & DROP (Click to drop) ---
+        // --- 4. ANDALUZ DRAG & DROP (Fase 4 - Click to Drop) ---
         const andaluciaWords = [
             { word: '"Sapato" (por zapato)', trait: 'seseo' },
+            { word: '"Sielo" (por cielo)', trait: 'seseo' },
             { word: '"Zolo" (por solo)', trait: 'ceceo' },
+            { word: '"Zervesa" (por cerveza)', trait: 'ceceo' },
             { word: '"Cabayo" (por caballo)', trait: 'yeismo' },
             { word: '"Loh niñoh" (los niños)', trait: 'aspiracion_perdida' },
+            { word: '"Pescao" (por pescado)', trait: 'aspiracion_perdida' },
+            { word: '"Er pueblo" (por el pueblo)', trait: 'aspiracion_perdida' },
             { word: '"¿Ustedes vais?"', trait: 'morfosintaxis' }
         ];
 
@@ -654,18 +694,22 @@
                     } else {
                         selectedAndaluciaWord.style.borderColor = 'var(--danger)';
                         updateScore(-5);
+                        selectedAndaluciaWord.style.transform = 'translateX(5px)';
+                        setTimeout(() => selectedAndaluciaWord.style.transform = 'translateX(-5px)', 100);
+                        setTimeout(() => selectedAndaluciaWord.style.transform = 'translateX(0)', 200);
                     }
                 };
             });
         }
 
-        // --- QUIZ ---
+        // --- 5. QUIZ INTERACTIVO (Fase 5) ---
         const quizData = [
-            { q: "El español de América se enriqueció enormemente con palabras como 'tomate' o 'huracán'. Estas palabras provienen del:", opts: ["Superestrato germánico", "Sustrato indígena", "Arabismo", "Mozárabe"], correct: 1 },
-            { q: "Según la Constitución, el deber de conocer el castellano afecta a:", opts: ["Funcionarios del Estado", "Habitantes de zonas bilingües", "Todos los españoles", "Los mayores de 18 años"], correct: 2 },
-            { q: "Cuando dos lenguas conviven pero una es marginada al uso familiar y rural, impidiendo su normalización, hablamos de...", opts: ["Bilingüismo", "Interferencia", "Préstamo", "Diglosia"], correct: 3 },
-            { q: "El prejuicio de afirmar que el andaluz suena 'inculto' o que 'hablan mal' se desmonta científicamente porque:", opts: ["Proviene del latín culto.", "Toda variedad dialectal es un sistema fonético válido guiado por la economía del lenguaje.", "Está amparado en el artículo 3 de la Constitución.", "Es una lengua oficial separada."], correct: 1 },
-            { q: "El fenómeno morfosintáctico de utilizar 'ustedes' con un verbo en 3ª persona ('Ustedes saben') para un trato de confianza/informal es típico de:", opts: ["Andalucía Occidental y Canarias", "Galicia", "País Vasco", "Cataluña"], correct: 0 }
+            { q: "El español de América se enriqueció enormemente con palabras como 'tomate', 'huracán' o 'patata'. Estas palabras provienen del fenómeno histórico llamado:", opts: ["Superestrato germánico", "Sustrato indígena", "Arabismo", "Interferencia mozárabe"], correct: 1 },
+            { q: "Según el Artículo 3 de la Constitución, el DEBER de conocer el castellano afecta a:", opts: ["Los funcionarios del Estado exclusivamente", "Los habitantes de comunidades monolingües", "Todos los españoles", "Los mayores de 18 años nacidos en territorio nacional"], correct: 2 },
+            { q: "Cuando dos lenguas conviven en un territorio, pero una de ellas tiene alto prestigio institucional y la otra es marginada al uso familiar o coloquial, impidiendo su normalización, hablamos científicamente de...", opts: ["Bilingüismo", "Interferencia Lingüística", "Préstamo adaptado", "Diglosia (lingüística o dialectal)"], correct: 3 },
+            { q: "El prejuicio etnolingüístico de afirmar que el andaluz suena 'inculto' o que sus hablantes 'destrozan el diccionario' se desmonta lingüísticamente porque:", opts: ["Proviene del latín clásico, que es más puro.", "Toda variedad dialectal es un sistema fonético válido y estructurado, guiado por la economía del lenguaje.", "Está amparado como lengua oficial separada en el artículo 3 de la Constitución.", "Fue inventado por la Real Academia en el siglo XVIII."], correct: 1 },
+            { q: "El fenómeno morfosintáctico de utilizar el pronombre 'ustedes' con un verbo en 3ª persona ('Ustedes saben mucho') para un trato informal y de confianza es típico de:", opts: ["Andalucía Occidental, Canarias y América", "Galicia y norte de Portugal", "País Vasco y Navarra", "Cataluña y Baleares"], correct: 0 },
+            { q: "Si en español usamos la expresión 'hacer un café' copiando literalmente la estructura de la lengua catalana ('fer un cafè'), estamos cometiendo...", opts: ["Un préstamo asimilado", "Una diglosia perfecta", "Un calco o interferencia lingüística", "Un arcaísmo sefardí"], correct: 2 }
         ];
 
         let currentQIndex = 0;
@@ -688,22 +732,22 @@
                     if(idx === qData.correct) {
                         btn.classList.add('correct'); updateScore(100);
                     } else {
-                        btn.classList.add('wrong'); buttons[qData.correct].classList.add('correct'); updateScore(-10);
+                        btn.classList.add('wrong'); buttons[qData.correct].classList.add('correct'); updateScore(-20);
                     }
                     setTimeout(() => {
                         currentQIndex++;
                         if(currentQIndex < quizData.length) initQuiz();
                         else {
-                            document.getElementById('quiz-container').innerHTML = `<h3 class="text-center" style="color:var(--success);">Interrogatorio Completado</h3>`;
+                            document.getElementById('quiz-container').innerHTML = `<div class="text-center"><i class="fa-solid fa-circle-check" style="font-size: 4rem; color: var(--success); margin-bottom: 20px;"></i><h3 style="color:var(--success);">Interrogatorio Completado</h3><p>Procesando resultados...</p></div>`;
                             document.getElementById('rosetta-section').classList.remove('hidden');
                         }
-                    }, 1500);
+                    }, 2000);
                 };
                 optsCont.appendChild(btn);
             });
         }
 
-        // --- BOSS FINAL (ROSETTA) ---
+        // --- 6. BOSS FINAL (ROSETTA) ---
         function checkBossLock() {
             const cas = document.getElementById('dial-cas').value;
             const gal = document.getElementById('dial-gal').value;
@@ -713,7 +757,7 @@
 
             if(cas === "1" && gal === "2" && cat === "4" && eus === "3") {
                 errorMsg.style.display = 'none';
-                updateScore(300);
+                updateScore(500); // Gran bonus final
                 clearInterval(state.timerInterval);
                 document.getElementById('final-score').innerText = state.score;
                 const m = Math.floor(state.timeElapsed / 60).toString().padStart(2, '0');
@@ -722,11 +766,11 @@
                 switchSection('screen-end');
                 createConfetti();
             } else {
-                errorMsg.style.display = 'block'; updateScore(-20);
+                errorMsg.style.display = 'block'; updateScore(-50);
             }
         }
 
-        // --- PARTICULAS DE FONDO ---
+        // --- 7. PARTICULAS DE FONDO (CANVAS) ---
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         let particlesArray = [];
@@ -739,8 +783,8 @@
             constructor() {
                 this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 2 + 0.5;
-                this.speedX = Math.random() * 0.5 - 0.25; this.speedY = Math.random() * 0.5 - 0.25;
-                this.color = (Math.random() > 0.5) ? 'rgba(0, 240, 255, 0.4)' : 'rgba(188, 19, 254, 0.4)';
+                this.speedX = Math.random() * 0.4 - 0.2; this.speedY = Math.random() * 0.4 - 0.2;
+                this.color = (Math.random() > 0.5) ? 'rgba(0, 240, 255, 0.25)' : 'rgba(188, 19, 254, 0.25)';
             }
             update() {
                 this.x += this.speedX; this.y += this.speedY;
@@ -755,7 +799,7 @@
 
         function initParticles() {
             particlesArray = [];
-            let num = (canvas.width * canvas.height) / 8000;
+            let num = (canvas.width * canvas.height) / 7000;
             for(let i = 0; i < num; i++) particlesArray.push(new Particle());
         }
 
@@ -770,21 +814,21 @@
         }
 
         function createConfetti() {
-            for(let i=0; i<100; i++) {
+            for(let i=0; i<150; i++) {
                 let conf = document.createElement('div');
-                conf.style.position = 'fixed'; conf.style.width = '12px'; conf.style.height = '12px';
+                conf.style.position = 'fixed'; conf.style.width = '10px'; conf.style.height = '10px';
                 conf.style.backgroundColor = ['#00f0ff', '#bc13fe', '#ffd700', '#00ff88'][Math.floor(Math.random()*4)];
-                conf.style.left = Math.random() * 100 + 'vw'; conf.style.top = '-10px'; conf.style.zIndex = '9999';
+                conf.style.left = Math.random() * 100 + 'vw'; conf.style.top = '-20px'; conf.style.zIndex = '9999';
                 document.body.appendChild(conf);
                 
                 conf.animate([
                     { transform: `translate3d(0,0,0) rotate(0deg)`, opacity: 1 },
-                    { transform: `translate3d(${Math.random()*200 - 100}px, 100vh, 0) rotate(${Math.random()*720}deg)`, opacity: 0 }
-                ], { duration: (Math.random() * 3 + 2) * 1000, easing: 'cubic-bezier(.37,0,.63,1)', fill: 'forwards' });
+                    { transform: `translate3d(${Math.random()*300 - 150}px, 100vh, 0) rotate(${Math.random()*720}deg)`, opacity: 0 }
+                ], { duration: (Math.random() * 3 + 2.5) * 1000, easing: 'cubic-bezier(.37,0,.63,1)', fill: 'forwards' });
             }
         }
 
-        // Inicializar
+        // INICIALIZACIÓN
         initParticles(); animateParticles();
         initMatchGame(); initAndaluciaGame(); initQuiz();
     </script>
